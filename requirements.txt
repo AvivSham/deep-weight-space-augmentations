@@ -1,0 +1,9 @@
+numpy
+torch
+torchvision
+tqdm
+wandb
+scipy
+matplotlib
+black
+plotly
