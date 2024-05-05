@@ -19,7 +19,7 @@ from experiments.utils.utils import (
     str2bool,
 )
 from experiments.data.dataset import INRDataset
-from augmentations.augmentations import mixup_augs, name2aug
+from augmentations.augmentations import mixup_augs, name2aug, all_augs
 from experiments.utils.lr_schedule import WarmupLRScheduler
 
 set_logger()
@@ -295,13 +295,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--statistics-path",
         type=str,
-        default="dataset/statistics.pth",
-        help="path to dataset statistics",
-    )
-    parser.add_argument(
-        "--split-path",
-        type=str,
-        default="dataset/mnist_splits.json",
+        default="dataset/fmnist_multiview/statistics.pth",
         help="path to dataset statistics",
     )
 
@@ -432,7 +426,7 @@ if __name__ == "__main__":
         "--augmentation",
         type=str,
         default=None,
-        choices=list(mixup_augs.keys()) + list(name2aug.keys()) + ["no-aug"],
+        choices=all_augs,
         help="type of augmentation",
     )
 

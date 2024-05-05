@@ -443,3 +443,5 @@ mixup_augs = {
     "combine": CombinationAugmentation(),
     "weights_only_aug": OnlyWeightsAndBiasesMixUp(),
 }
+
+all_augs = list(mixup_augs.keys()) + list(name2aug.keys()) + ["no-aug"]
