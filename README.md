@@ -33,7 +33,6 @@ To run the INR experiments, first download the data:
 
 ```shell
 mkdir datasets
-cd datasets
 wget "https://www.dropbox.com/scl/fi/okg2ib0dp59w6gofm1szl/fmnist_multiview.zip?rlkey=k7nt8zoizk2ywthl9lzv2zpa9&st=n22h4dyn&dl=0" -O fmnist_multiview.zip
 unzip -q fmnist_multiview.zip -d datasets
 ```
